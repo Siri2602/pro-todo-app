@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App 🚀</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>To-Do App <span class="rocket">🚀</span></h1>
+            <p class="tagline">Stay organized. Stay productive.</p>
+        </header>
+
+        <section class="progress-section">
+            <div class="progress-info">
+                <span id="progressText">0 of 0 tasks completed</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="add-task">
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                    required
+                />
+                <select id="prioritySelect" aria-label="Priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button type="submit" class="btn-add">Add Task</button>
+            </form>
+        </section>
+
+        <section class="controls">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+                autocomplete="off"
+            />
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="high">High</button>
+                <button class="filter-btn" data-filter="medium">Medium</button>
+                <button class="filter-btn" data-filter="low">Low</button>
+            </div>
+        </section>
+
+        <ul id="taskList" class="task-list"></ul>
+
+        <footer class="app-footer">
+            <span id="taskCount">0 tasks</span>
+            <button id="clearCompleted" class="btn-clear">Clear Completed</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
